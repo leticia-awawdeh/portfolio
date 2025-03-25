@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia Awawdeh - Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #6a0dad;  /* Deep technological purple */
+            --secondary-color: #9c4de3;  /* Lighter purple accent */
+            --background-start: #8e49c9;  /* Gradient start color */
+            --background-end: #4a148c;  /* Gradient end color */
+            --text-color: #ffffff;
+            --card-background: rgba(255,255,255,0.1);  /* Translucent card background */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--background-start), var(--background-end));
+            background-attachment: fixed;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #ffffff;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .about-list {
+            list-style-type: none;
+        }
+
+        .about-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .about-list li::before {
+            content: '•';
+            color: #ffffff;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+
+        .project-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .project-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #ffffff;
+            backdrop-filter: blur(5px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .project-card a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: rgba(255,255,255,0.8);
+            text-decoration: underline;
+        }
+
+        .project-card p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+                width: 95%;
+                margin: 1rem auto;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Letícia Awawdeh</h1>
+        </div>
+
+        <div class="section">
+            <h2>{ About Me }</h2>
+            <ul class="about-list">
+                <li>Software Engineering student at <strong>UFLA</strong></li>
+                <li>UX/UI Researcher and Digital Accessibility Researcher at <strong>UFLA</strong></li>
+                <li>Learning new languages, technologies and tools in the digital world!</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>{ Projects }</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <a href="https://github.com/leticia-awawdeh/ProjetoDashBoard" target="_blank">
+                        ProjetoDashBoard
+                    </a>
+                    <p>Desafio de projeto sobre banco de dados em Java</p>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/leticia-awawdeh/ApiRest" target="_blank">
+                        ApiRest
+                    </a>
+                    <p>Aplicando aprendizado de RestfullAPI</p>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/leticia-awawdeh/SistemaLoc" target="_blank">
+                        SistemaLoc
+                    </a>
+                    <p>Trabalho realizado na faculdade de um sistema simples de locação de equipamentos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
